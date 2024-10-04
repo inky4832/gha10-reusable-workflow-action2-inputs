@@ -1,6 +1,5 @@
 name: Resualbe  workflow
 on:
-  push: 
     workflow_call:
           inputs:
             xxx: 
