@@ -1,4 +1,4 @@
-name: artifacts upload action
+name: reusable inputs workflow action
 on:
   push:
     branches:
