@@ -1,0 +1,26 @@
+name: Resualbe  workflow
+on:
+  push: 
+    workflow_call:
+          inputs:
+            xxx: 
+              description: 'A build passed from the caller workflow'
+              default: build   
+              required: false
+              type: string
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts 
+        uses: actions/download-artifact@v4
+        with:
+          name: build-files           
+          path: ${{inputs.xxx}}                 
+
+      - name: Output contents          
+        run: |
+          ls -R 
+
+      - name: Deploy
+        run: echo "Deploying..."
