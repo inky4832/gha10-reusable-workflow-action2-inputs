@@ -14,8 +14,8 @@ jobs:
       - name: Download artifacts 
         uses: actions/download-artifact@v4
         with:
-          name: build-files           
-          path: ${{inputs.xxx}}                 
+          name: ${{inputs.xxx}}           
+          path: build                 
 
       - name: Output contents          
         run: |
